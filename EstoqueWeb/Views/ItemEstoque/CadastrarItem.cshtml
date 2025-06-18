@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="LojaNome" class="form-label">Id do produto *</label>
+                                        <label for="LojaNome" class="form-label">Escolha um Produto *</label>
                                         <select asp-for="ItemEstoque.ProdutoId" class="form-control" asp-items="@(new SelectList(Model.Produtos, "Id", "Nome"))">
                                             <option></option>
                                         </select>
@@ -47,7 +47,7 @@
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="LojaEndereco" class="form-label">Id da loja *</label>
+                                        <label for="LojaEndereco" class="form-label">Escolha uma  loja *</label>
                                         <select asp-for="ItemEstoque.LojaId" class="form-control" asp-items="@(new SelectList(Model.Lojas, "Id", "Nome"))">
                                             <option></option>
                                         </select>
@@ -61,7 +61,7 @@
 
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label for="LojaEndereco" class="form-label">Endereço da loja *</label>
+                                        <label for="LojaEndereco" class="form-label">Digite a quantidade*</label>
 
                                         <input type="text" class="form-control" id="Quantidade" asp-for="ItemEstoque.Quantidade" required maxlength="60" placeholder="Digite o endereço da loja">
                                         <div class="invalid-feedback">
