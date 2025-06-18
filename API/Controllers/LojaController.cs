@@ -10,9 +10,9 @@ public class LojasController(ILojaService service) : ControllerBase
     [HttpGet]
     [Route("lojas/")]
 
-    public async Task<ActionResult<IEnumerable<LojasViewModel>>> GetLojas()
+    public async Task<ActionResult<IEnumerable<LojasViewModel>>> GetLojas([FromQuery]string? lojaNome)
     {
-        var lojas = await service.BuscaLojas();
+        var lojas = await service.BuscaLojas(lojaNome!);
 
         return Ok(LojasViewModel.ToLojasViewModel(lojas));
 

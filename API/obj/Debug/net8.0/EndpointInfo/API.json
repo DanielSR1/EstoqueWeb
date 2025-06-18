@@ -5,6 +5,30 @@
     "version": "1.0"
   },
   "paths": {
+    "/Database/Create": {
+      "get": {
+        "tags": [
+          "Database"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Database/Delete": {
+      "get": {
+        "tags": [
+          "Database"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/ItemEstoques/Completo": {
       "get": {
         "tags": [
@@ -206,6 +230,15 @@
       "get": {
         "tags": [
           "Lojas"
+        ],
+        "parameters": [
+          {
+            "name": "lojaNome",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {

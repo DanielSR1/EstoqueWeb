@@ -31,13 +31,16 @@
                     </div>
                     <div class="card-body">
                         <form asp-action="Update" asp-controller="ItemEstoque">
+                            <input hidden value="@Model.Id" asp-for="Id"/>
+                            <input hidden value="@Model.ProdutoId" asp-for="ProdutoId"/>
+                            <input hidden value="@Model.LojaId" asp-for="LojaId"/>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="itemquantidade" class="form-label">Atualize a quantidade em estoque *</label>
                                         <div class="input-group">
                                             <span class="input-group-text">QT</span>
-                                            <input asp-for="Quantidade" type="number" class="form-control" id="itemquantidade" name="Valor" value="@Model.Quantidade" step="1" min="0" required>
+                                            <input asp-for="Quantidade" type="number" class="form-control" id="itemquantidade" value="@Model.Quantidade" step="1" min="0" required>
                                             <div class="invalid-feedback">
                                                 Por favor, informe um valor válido.
                                             </div>

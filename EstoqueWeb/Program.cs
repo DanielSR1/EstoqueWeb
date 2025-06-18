@@ -47,6 +47,6 @@ app.UseAuthorization();
 // Define a rota padrão
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=ItemEstoque}/{action=Index}/{id?}");
 
 app.Run();

@@ -7,7 +7,7 @@ namespace EstoqueWeb.Application;
 public interface IProdutoServices
 {
     Task<Produto> GetProduto(int id);
-    Task<IEnumerable<Produto>> GetProdutos(string nomeProduto);
+    Task<IEnumerable<Produto>> GetProdutos(string nomeProduto = default!);
     Task Delete(int id);
     Task Update(int id, Produto produto);  
     Task Create(Produto produto);
@@ -20,7 +20,7 @@ public class ProdutoServices(HttpClient httpClient) : IProdutoServices
         PropertyNameCaseInsensitive = true,
     };
 
-    public async Task<IEnumerable<Produto>> GetProdutos(string nomeProduto)
+    public async Task<IEnumerable<Produto>> GetProdutos(string nomeProduto = default!)
     {
         var rota = string.Format("/produtos?produtoNome={0}", nomeProduto);
         var message = await httpClient.GetAsync(rota);

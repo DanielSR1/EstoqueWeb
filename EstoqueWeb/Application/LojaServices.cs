@@ -7,7 +7,7 @@ namespace EstoqueWeb.Application;
 public interface ILojaServices
 {
     Task<Loja> GetLoja(int id);
-    Task<IEnumerable<Loja>> GetLojas();
+    Task<IEnumerable<Loja>> GetLojas(string lojaNome = default!);
     Task Delete(int id);
 
     Task Update(int id, Loja loja);
@@ -20,9 +20,9 @@ public class LojaServices(HttpClient httpClient) : ILojaServices
     {
         PropertyNameCaseInsensitive = true,
     };
-    public async Task<IEnumerable<Loja>> GetLojas()
+    public async Task<IEnumerable<Loja>> GetLojas(string lojaNome = default!)
     {
-        var message = await httpClient.GetAsync("/lojas");
+        var message = await httpClient.GetAsync(string.Format("/lojas?lojaNome={0}", lojaNome));
 
         message.EnsureSuccessStatusCode();
 

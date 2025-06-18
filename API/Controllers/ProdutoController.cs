@@ -12,7 +12,7 @@ public class ProdutoController (IProdutoService service) : ControllerBase
 
     public async Task<ActionResult<IEnumerable<ProdutosViewModel>>> GetProdutos([FromQuery]string? produtoNome)
     {
-        return Ok(ProdutosViewModel.ToProdutosViewModel(await service.BuscaProdutos(produtoNome)));
+        return Ok(ProdutosViewModel.ToProdutosViewModel(await service.BuscaProdutos(produtoNome!)));
 
     }
 

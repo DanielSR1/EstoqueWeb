@@ -25,41 +25,6 @@
                     </div>
                 </div>
 
-                <!-- Filtros -->
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label for="filtroLoja" class="form-label">Filtrar por Loja</label>
-                                <select class="form-select" id="filtroLoja">
-                                    <option value="">Todas as lojas</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="filtroProduto" class="form-label">Filtrar por Produto</label>
-                                <select class="form-select" id="filtroProduto">
-                                    <option value="">Todos os produtos</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <label for="filtroEstoque" class="form-label">Nível de Estoque</label>
-                                <select class="form-select" id="filtroEstoque">
-                                    <option value="">Todos os níveis</option>
-                                    <option value="baixo">Baixo (< 10)</option>
-                                    <option value="medio">Médio (10-50)</option>
-                                    <option value="alto">Alto (> 50)</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label">&nbsp;</label>
-                                <button class="btn btn-outline-secondary w-100" onclick="limparFiltros()">
-                                    <i class="bi bi-x-circle"></i> Limpar Filtros
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Resumo -->
                 <div class="row mb-4">
                     <div class="col-md-3">
@@ -75,22 +40,6 @@
                             <div class="card-body">
                                 <h5 class="card-title text-success">Valor Total</h5>
                                 <h3 id="resumoValorTotal">@Model.ValorTotal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title text-warning">Baixo Estoque</h5>
-                                <h3 id="resumoBaixoEstoque">0</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <h5 class="card-title text-info">Produtos Únicos</h5>
-                                <h3 id="resumoProdutosUnicos">0</h3>
                             </div>
                         </div>
                     </div>

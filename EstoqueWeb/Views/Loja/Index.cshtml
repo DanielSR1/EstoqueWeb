@@ -29,24 +29,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-search"></i></span>
-                                    <input type="text" class="form-control" id="searchLoja" placeholder="Buscar Lojas...">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <select class="form-select" id="filtroPreco">
-                                    <option value="">Todos os preços</option>
-                                    <option value="0-50">R$ 0 - R$ 50</option>
-                                    <option value="50-200">R$ 50 - R$ 200</option>
-                                    <option value="200-1000">R$ 200 - R$ 1.000</option>
-                                    <option value="1000+">Acima de R$ 1.000</option>
-                                </select>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-outline-secondary w-100" onclick="limparFiltros()">
-                                    <i class="bi bi-x-circle"></i> Limpar Filtros
-                                </button>
+                                <form method="get" asp-action="Index" asp-controller="Loja">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                        <input type="text" class="form-control" id="lojaNome" name="lojaNome" placeholder="Buscar Lojas...">
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

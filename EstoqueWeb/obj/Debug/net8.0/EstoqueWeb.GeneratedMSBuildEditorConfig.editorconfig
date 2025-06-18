@@ -28,22 +28,6 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Daniel/source/repos/estoqueWeb/EstoqueWeb/Views/Home/Estoque.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFc3RvcXVlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Daniel/source/repos/estoqueWeb/EstoqueWeb/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Daniel/source/repos/estoqueWeb/EstoqueWeb/Views/Home/Lojas.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2phcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Daniel/source/repos/estoqueWeb/EstoqueWeb/Views/Home/Produtos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdXRvcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Daniel/source/repos/estoqueWeb/EstoqueWeb/Views/ItemEstoque/CadastrarItem.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbUVzdG9xdWVcQ2FkYXN0cmFySXRlbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

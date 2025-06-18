@@ -37,9 +37,14 @@ public class LojaService(ApiDBContext context) : ILojaService
         return await context.Lojas.FirstOrDefaultAsync(s => s.Id == id) ?? default!;
     }
 
-    public async Task<IEnumerable<Entidade.Loja>> BuscaLojas()
+    public async Task<IEnumerable<Entidade.Loja>> BuscaLojas(string lojaNome)
     {
-        return await context.Lojas.ToListAsync();
+        if (string.IsNullOrWhiteSpace(lojaNome))
+        {
+            return await context.Lojas.ToListAsync();
+        }
+
+        return await context.Lojas.Where(s => s.Nome.Contains(lojaNome)).ToListAsync();
     }
 
     public async Task<bool> DeleteLoja(int id)
@@ -59,7 +64,7 @@ public interface ILojaService
     public Task<bool> AdicionaLoja(ILojaProps props);
 
     public Task<Entidade.Loja> BuscaLoja(int id);
-    public Task<IEnumerable<Entidade.Loja>> BuscaLojas();
+    public Task<IEnumerable<Entidade.Loja>> BuscaLojas(string lojaNome);
 
     public Task<bool> DeleteLoja(int id);
 

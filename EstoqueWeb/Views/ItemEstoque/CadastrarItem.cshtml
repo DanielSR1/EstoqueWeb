@@ -1,4 +1,4 @@
-﻿@model ItemEstoque
+﻿@model ItemEstoqueCreate
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -34,7 +34,10 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="LojaNome" class="form-label">Id do produto *</label>
-                                        <input type="text" class="form-control" id="ProdutoId" asp-for="ProdutoId" required maxlength="50" placeholder="Digite o id do produto">
+                                        <select asp-for="ItemEstoque.ProdutoId" class="form-control" asp-items="@(new SelectList(Model.Produtos, "Id", "Nome"))">
+                                            <option></option>
+                                        </select>
+                                        @*<input type="text" class="form-control" id="ProdutoId" asp-for="ProdutoId" required maxlength="50" placeholder="Digite o id do produto">*@
                                         <div class="invalid-feedback">
                                             Por favor, informe o id da loja.
                                         </div>
@@ -45,7 +48,10 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="LojaEndereco" class="form-label">Id da loja *</label>
-                                        <input type="text" class="form-control" id="LojaId" asp-for="LojaId" required maxlength="60" placeholder="Digite o id da loja">
+                                        <select asp-for="ItemEstoque.LojaId" class="form-control" asp-items="@(new SelectList(Model.Lojas, "Id", "Nome"))">
+                                            <option></option>
+                                        </select>
+                                        @*<input type="text" class="form-control" id="LojaId" asp-for="LojaId" required maxlength="60" placeholder="Digite o id da loja">*@
                                         <div class="invalid-feedback">
                                             Por favor, informe o id da loja.
                                         </div>
@@ -56,7 +62,8 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="LojaEndereco" class="form-label">Endereço da loja *</label>
-                                        <input type="text" class="form-control" id="Quantidade" asp-for="Quantidade" required maxlength="60" placeholder="Digite o endereço da loja">
+
+                                        <input type="text" class="form-control" id="Quantidade" asp-for="ItemEstoque.Quantidade" required maxlength="60" placeholder="Digite o endereço da loja">
                                         <div class="invalid-feedback">
                                             Por favor, informe a quantidade.
                                         </div>

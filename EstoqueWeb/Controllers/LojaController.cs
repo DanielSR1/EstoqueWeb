@@ -8,9 +8,9 @@ public class LojaController(ILojaServices lojaServices) : Controller
     {
         return View();
     }
-    public async Task<IActionResult> Index()
+    public async Task<IActionResult> Index(string? lojaNome)
     {
-        return View(nameof(Index), await lojaServices.GetLojas());
+        return View(nameof(Index), await lojaServices.GetLojas(lojaNome!));
     }
 
     public async Task<IActionResult> Details(int id)

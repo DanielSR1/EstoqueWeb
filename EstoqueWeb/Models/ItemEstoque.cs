@@ -11,6 +11,13 @@ namespace EstoqueWeb.Models
         public int Quantidade { get; set; }
     }
 
+    public class ItemEstoqueCreate
+    {
+        public ItemEstoque ItemEstoque { get; set; }
+        public IEnumerable<Produto> Produtos { get; set; }
+        public IEnumerable<Loja> Lojas { get; set; }
+    }
+
     public class ItemEstoqueViewModel
     {
         public int TotalItens {  get; set; }
